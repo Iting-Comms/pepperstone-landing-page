@@ -187,7 +187,7 @@
                                     <div class="elementor-widget-container">
                                         <div class="lqd-imggrp-single d-block pos-rel ">
                                             <div class="lqd-imggrp-img-container d-flex pos-rel align-items-center justify-content-center ">
-                                                <img  src="../assets/image/FeaturedCards_01.png" />
+                                                <img  src="../assets/image/FeaturedCards_01.png" alt="Trade with Australia’s Leading Trading Broker"/>
                                             </div>
                                         </div>
                                     </div>
@@ -472,7 +472,7 @@
                                                             <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                 <figure class="w-100 pos-rel">
                                                                     <!--메인이미지2-->
-                                                                    <img src="../assets/image/FeaturedCards_IndustryLeadingLiquidity_noBG-768x591.png"  />
+                                                                    <img src="../assets/image/FeaturedCards_IndustryLeadingLiquidity_noBG-768x591.png" alt="Value for Money" />
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -492,7 +492,7 @@
                                                             <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                 <figure class="w-100 pos-rel">
                                                                     <!--메인이미지3-->
-                                                                    <img  src="../assets/image/Deposits-Withdrawals_noBG-768x591.png" alt=""/>
+                                                                    <img  src="../assets/image/Deposits-Withdrawals_noBG-768x591.png" alt="Spreads"/>
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -575,7 +575,7 @@
                                                             <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                 <figure class="w-100 pos-rel">
                                                                     <!--메인이미지4-->
-                                                                    <img src="../assets/image/FeaturedCards_RazorSharpSpread_noBG-768x591.png"/>
+                                                                    <img src="../assets/image/FeaturedCards_RazorSharpSpread_noBG-768x591.png" alt="Fees & Commissions"/>
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -595,7 +595,7 @@
                                                             <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                 <figure class="w-100 pos-rel">
                                                                     <!--메인이미지5-->
-                                                                    <img src="../assets/image/Platforms_and_Tools_noBG-768x591.png"  />
+                                                                    <img src="../assets/image/Platforms_and_Tools_noBG-768x591.png" alt="Trade Execution"/>
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -678,7 +678,7 @@
                                                             <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                 <figure class="w-100 pos-rel">
                                                                     <!--메인이미지6-->
-                                                                    <img src="../assets/image/sb-long-awards-won.jpg"  />
+                                                                    <img  src="../assets/image/Deposits-Withdrawals_noBG-768x591.png" alt="Best Customer Service"/>
                                                                 </figure>
                                                             </div>
                                                         </div>
@@ -883,16 +883,18 @@
     </main>
 </div>
 <script>
-    $(document).ready(function (){
-        $(".popup_").bind('click',function (e){
-            e.preventDefault();
-            $(".pum-overlay").show();
-        })
-        $(".popmake-close").bind('click',function (e){
-            e.preventDefault();
-            $(".pum-overlay").hide();
-        })
+$(document).ready(function (){
+    $(".popup_").bind('click',function (e){
+        e.preventDefault();
+        var targetLanding='https://secure.pepperstone.com/register'
+        if(location.search !== undefined){
+            targetLanding = targetLanding + location.search
+        }
+        
+        //location.href = targetLanding
+        alert(targetLanding)
     })
+})
 </script>
 <script type="text/javascript" src="../assets/js/fastdom.min.js" id="fastdom-js"></script>
 <script type="text/javascript" src="../assets/js/bootstrap.min.js" id="bootstrap-js"></script>

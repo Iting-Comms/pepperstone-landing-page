@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="elementor-div elementor-div-581258a elementor-widget elementor-widget-ld_button" >
                                     <div class="elementor-widget-container">
-                                        <a href="#" class="elementor-button btn btn-underlined btn-hover-txt-liquid-y border-thin btn-icon-shaped btn-has-label">
+                                        <a href="#" class="elementor-button btn btn-underlined btn-hover-txt-liquid-y border-thin btn-icon-shaped btn-has-label popup_">
                                             <span class="btn-txt" >
                                                 Try Free Demo
                                             </span>
@@ -202,7 +202,7 @@
                                         <div class="elementor-widget-container">
                                             <div class="lqd-imggrp-single d-block pos-rel ">
                                                 <div class="lqd-imggrp-img-container d-flex pos-rel align-items-center justify-content-center ">
-                                                    <img  src="./assets/image/FeaturedCards_01.png" />
+                                                    <img  src="./assets/image/FeaturedCards_01.png" alt="Trade with Australia’s Leading Trading Broker"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -329,7 +329,7 @@
                                                         <!--가운데 배경이미지-->
                                                         <img decoding="async" width="3379" height="599"
                                                              src="./assets/image/Rated1_02.png"
-                                                             class="attachment-full size-full wp-image-412" alt="" itemprop="image"
+                                                             class="attachment-full size-full wp-image-412" alt="background image" itemprop="image"
                                                              data-src="./assets/image/Rated1_02.png"
                                                              data-srcset="./assets/image/Rated1_02.png 3379w, ./assets/image/Rated1_02-300x53.png 300w, ./assets/image/Rated1_02-1024x182.png 1024w, ./assets/image/Rated1_02-1536x272.png 1536w, ./assets/image/Rated1_02-2048x363.png 2048w"
                                                              data-sizes="(max-width: 3379px) 100vw, 3379px" data-aspect="5.6410684474124" />
@@ -349,7 +349,7 @@
                                     </div>
                                     <div class="elementor-div e-d-2b3 elementor-widget elementor-widget-ld_button" >
                                         <div class="elementor-widget-container">
-                                            <a href="#" class="elementor-button btn btn-solid btn-custom-size btn-icon-right btn-hover-swp btn-has-label ">
+                                            <a href="#" class="elementor-button btn btn-solid btn-custom-size btn-icon-right btn-hover-swp btn-has-label popup_">
                                                 <span data-text="Trade Now" class="btn-txt">
                                                     Trade Now
                                                 </span>
@@ -487,7 +487,7 @@
                                                                 <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                     <figure class="w-100 pos-rel">
                                                                         <!--메인이미지2-->
-                                                                        <img src="./assets/image/FeaturedCards_IndustryLeadingLiquidity_noBG-768x591.png"  />
+                                                                        <img src="./assets/image/FeaturedCards_IndustryLeadingLiquidity_noBG-768x591.png" alt="Value for Money" />
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -507,7 +507,7 @@
                                                                 <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                     <figure class="w-100 pos-rel">
                                                                         <!--메인이미지3-->
-                                                                        <img  src="./assets/image/Deposits-Withdrawals_noBG-768x591.png" alt=""/>
+                                                                        <img  src="./assets/image/Deposits-Withdrawals_noBG-768x591.png" alt="Spreads"/>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -588,7 +588,7 @@
                                                                 <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                     <figure class="w-100 pos-rel">
                                                                         <!--메인이미지4-->
-                                                                        <img src="./assets/image/FeaturedCards_RazorSharpSpread_noBG-768x591.png"/>
+                                                                        <img src="./assets/image/FeaturedCards_RazorSharpSpread_noBG-768x591.png" alt="Fees & Commissions"/>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -608,11 +608,10 @@
                                                                 <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                     <figure class="w-100 pos-rel">
                                                                         <!--메인이미지5-->
-                                                                        <img src="./assets/image/Platforms_and_Tools_noBG-768x591.png"  />
+                                                                        <img src="./assets/image/Platforms_and_Tools_noBG-768x591.png" alt="Trade Execution"/>
                                                                     </figure>
                                                                 </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -691,7 +690,7 @@
                                                                 <div class="lqd-imggrp-img-container d-inline-flex pos-rel align-items-center justify-content-center ">
                                                                     <figure class="w-100 pos-rel">
                                                                         <!--메인이미지6-->
-                                                                        <img src="./assets/image/sb-long-awards-won.jpg"  />
+                                                                        <img  src="./assets/image/Deposits-Withdrawals_noBG-768x591.png" alt="Best Customer Service"/>
                                                                     </figure>
                                                                 </div>
                                                             </div>
@@ -891,19 +890,13 @@
         $(document).ready(function (){
             $(".popup_").bind('click',function (e){
                 e.preventDefault();
-                var targetLanding='https://dev-www.mercuryx.net'
+                var targetLanding='https://secure.pepperstone.com/register'
                 if(location.search !== undefined){
-                    console.log(location.search)
                     targetLanding = targetLanding + location.search
                 }
                 
                 //location.href = targetLanding
-                console.log(targetLanding)
-                //$(".pum-overlay").show();
-            })
-            $(".popmake-close").bind('click',function (e){
-                e.preventDefault();
-                $(".pum-overlay").hide();
+                alert(targetLanding)
             })
         })
     </script>
