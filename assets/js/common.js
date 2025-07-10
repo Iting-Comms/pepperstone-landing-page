@@ -1,4 +1,4 @@
-var CLICK_TO_LANDING = false;//실제 페이지로 넘어 가려면  true
+var CLICK_TO_LANDING = false;//true: location.href, false: alert
 
 function clickFunction(locale){
     //my: https://secure.pepperstone.com/register?legalEntity=individual&locale=en
@@ -8,7 +8,7 @@ function clickFunction(locale){
     //hk: https://secure.pepperstone.com/register?legalEntity=individual&locale=tw
     //tw: https://secure.pepperstone.com/register?legalEntity=individual&locale=tw
 
-    var targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=en';//기본 및 locale 없을때     
+    var targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=en';//default     
     if(locale === 'th'){
         targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=th';
     }else if(locale === 'vn'){
@@ -17,9 +17,9 @@ function clickFunction(locale){
         targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=tw';
     }
     
-    if(location.search !== undefined ){
+    if (location.search) {
         if(targetLanding.indexOf('?') > -1){
-            targetLanding = targetLanding +'&'+ location.search.substring(1);// ? 제거
+            targetLanding = targetLanding +'&'+ location.search.substring(1);
         }else{
             targetLanding = targetLanding + location.search;
         }
