@@ -886,13 +886,7 @@
 $(document).ready(function (){
     $(".popup_").bind('click',function (e){
         e.preventDefault();
-        var targetLanding='https://secure.pepperstone.com/register'
-        if(location.search !== undefined){
-            targetLanding = targetLanding + location.search
-        }
-        
-        //location.href = targetLanding
-        alert(targetLanding)
+        clickFunction('hk');
     })
 })
 </script>
@@ -905,6 +899,6 @@ $(document).ready(function (){
 <script type="text/javascript" src="../assets/js/SplitText.min.js" id="splittext-js"></script>
 <script type="text/javascript" src="../assets/js/theme.min.js" id="liquid-theme-js"></script>
 <script type="text/javascript" src="../assets/js/fontfaceobserver.js" id="jquery-fontfaceobserver-js"></script>
-
+<script type="text/javascript" src="../assets/js/common.js" id="common-js"></script>
 </body>
 </html>
