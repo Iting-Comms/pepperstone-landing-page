@@ -14,7 +14,7 @@ function clickFunction(locale){
     }else if(locale === 'vn'){
         targetLanding='https://secure.pepperstoneworld.com/register?legalEntity=individual&locale=vi';
     }else if(locale === 'hk'||locale === 'tw'){
-        targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=tw';
+        targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=zh-TW';
     }
     
     if (location.search) {
