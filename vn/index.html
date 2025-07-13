@@ -876,8 +876,8 @@
                                 <p><img decoding="async" class="desktop-view-img" src="../assets/image/pepperstone-banner-desktop.jpg"/></p>
                                 <p><img decoding="async" class="mobile-view-img" src="../assets/image/pepperstone-banner-desktop.jpg"/></p>
                                 <div class="pum-button-column">
-                                    <a class="pum-blue-button" href="#">Giao dịch ngay</a><br />
-                                    <a class="pum-white-button" href="#">Thử bản demo miễn phí</a>
+                                    <a class="pum-blue-button go-landing-btn" href="#">Giao dịch ngay</a><br />
+                                    <a class="pum-white-button go-landing-btn" href="#">Thử bản demo miễn phí</a>
                                 </div>
                             </div>
                         </div>
@@ -891,6 +891,14 @@
 <script>
 $(document).ready(function (){
     $(".popup_").bind('click',function (e){
+        e.preventDefault();
+        $(".pum-overlay").show();
+    });
+    $(".popmake-close").bind('click',function (e){
+        e.preventDefault();
+        $(".pum-overlay").hide();
+    });
+    $(".go-landing-btn").bind('click',function (e){
         e.preventDefault();
         clickFunction('vn');
     })

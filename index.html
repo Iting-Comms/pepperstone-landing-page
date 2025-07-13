@@ -874,8 +874,8 @@
                                     <p><img decoding="async" class="desktop-view-img" src="./assets/image/pepperstone-banner-desktop.jpg"/></p>
                                     <p><img decoding="async" class="mobile-view-img" src="./assets/image/pepperstone-banner-desktop.jpg"/></p>
                                     <div class="pum-button-column">
-                                        <a class="pum-blue-button" href="#">Trade Now</a><br />
-                                        <a class="pum-white-button" href="#">Try Free Demo</a>
+                                        <a class="pum-blue-button go-landing-btn" href="#">Trade Now</a><br />
+                                        <a class="pum-white-button go-landing-btn" href="#">Try Free Demo</a>
                                     </div>
                                 </div>
                             </div>
@@ -890,8 +890,16 @@
         $(document).ready(function (){
             $(".popup_").bind('click',function (e){
                 e.preventDefault();
+                $(".pum-overlay").show();
+            });
+            $(".popmake-close").bind('click',function (e){
+                e.preventDefault();
+                $(".pum-overlay").hide();
+            });
+            $(".go-landing-btn").bind('click',function (e){
+                e.preventDefault();
                 clickFunction('');//index는 locale없음 기본값으로 동작
-            })
+            });
         })
     </script>
     <script type="text/javascript" src="./assets/js/fastdom.min.js" id="fastdom-js"></script>
