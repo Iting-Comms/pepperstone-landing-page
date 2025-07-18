@@ -1,5 +1,3 @@
-var CLICK_TO_LANDING = false;//true: location.href, false: alert
-
 function clickFunction(locale){
     //my: https://secure.pepperstone.com/register?legalEntity=individual&locale=en
     //sg: https://secure.pepperstone.com/register?legalEntity=individual&locale=en
@@ -17,17 +15,24 @@ function clickFunction(locale){
         targetLanding='https://secure.pepperstone.com/register?legalEntity=individual&locale=zh-TW';
     }
     
-    if (location.search) {
-        if(targetLanding.indexOf('?') > -1){
-            targetLanding = targetLanding +'&'+ location.search.substring(1);
-        }else{
-            targetLanding = targetLanding + location.search;
+    try{
+        var queryString = location.search;
+        if (queryString !== '') {
+            if(targetLanding.indexOf('?') > -1){
+                targetLanding = targetLanding +'&'+ location.search.substring(1);
+            }else{
+                targetLanding = targetLanding + location.search;
+            }
+            
+            if(queryString.indexOf('__test__=true') > -1){
+                alert(targetLanding)
+                return;
+            }
         }
-    }
-    
-    if(CLICK_TO_LANDING){
+        
         location.href = targetLanding
-    }else{
-        alert(targetLanding)
-    }   
+    }catch(e){
+        console.log(e)
+        location.href = targetLanding
+    }
 }
